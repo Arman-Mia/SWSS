@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smart Waste Segregation System </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header>
+            <h1>♻️Smart Waste Segregation System </h1>
+            <p>Upload an image to detect: Organic, Paper, Plastic, Glass, or Metal</p>
+        </header>
+
+        <div class="content-area">
+            <div class="upload-section">
+                <button class="upload-btn" onclick="document.getElementById('image-input').click()">
+                    📷 Upload Waste Image
+                </button>
+                <input type="file" id="image-input" accept="image/*" hidden onchange="handleUpload(this)">
+            </div>
+
+            <div id="preview-container" style="display:none;">
+                <img id="uploaded-image" src="#" alt="Waste Image">
+            </div>
+
+            <div id="loading" style="display:none;">
+                <div class="spinner"></div>
+                <p>Analyzing waste type...</p>
+            </div>
+
+            <div id="result-container" style="display:none;">
+                <h2 id="result-title">Detected: <span id="label-name">...</span></h2>
+                <div id="confidence">Confidence: 0%</div>
+                
+                <div class="details-box">
+                    <h3>Type Includes:</h3>
+                    <div id="result-details"></div>
+                </div>
+                
+                <button class="reset-btn" onclick="resetApp()">Check Another Item</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
