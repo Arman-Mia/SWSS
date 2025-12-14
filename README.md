@@ -8,7 +8,7 @@ An web application that detects waste types (Organic, Plastic, Paper, Metal, Gla
 Smart Waste Segregation System web application that uses Artificial Intelligence to classify waste into five distinct categories. It helps users identify proper waste disposal methods by simply uploading an image.
 
 ## 🚀 Live Demo
-[Link to your live demo here - e.g., https://yourusername.github.io/ecosort/]
+[Link to your live demo here - https://arman-mia.github.io/SWSS/]
 
 ## 🧐 Features
 - **Instant Recognition:** Upload an image and get immediate classification.
